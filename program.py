@@ -1,1 +1,4 @@
-print("Hello Word!")
+print("Hello, Liza!")
+
+# Прочитать файл из папки ./data
+# вывести на экран всё
