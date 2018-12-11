@@ -16,6 +16,13 @@ for line in f:
     # extract name of person, print Name="..", 
     # split by comma, extract (1) expert rating, (2) year of article creation, 
     # e.g. rating=N, article_year=2013
-    print line, 
+    print (line)
+    line.split(',')
+    print(line)
+    first = line.index('"',0, len(line))
+    end = line.rindex('"',0, len(line))
+    print( first)
+    print( end)
+    print( line[first+1:end])
 
 f.close() 
