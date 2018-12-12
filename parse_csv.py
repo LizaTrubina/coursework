@@ -16,13 +16,18 @@ for line in f:
     # extract name of person, print Name="..", 
     # split by comma, extract (1) expert rating, (2) year of article creation, 
     # e.g. rating=N, article_year=2013
-    print (line)
-    line.split(',')
-    print(line)
+    print("source="+line)
+    # line.split(',')
+    #print("after split line="+line)
+
+    # get surname and name - make separate function fio=getSurnameAndName(line)
     first = line.index('"',0, len(line))
     end = line.rindex('"',0, len(line))
-    print( first)
-    print( end)
-    print( line[first+1:end])
+    fio = line[first+1:end]
+    print("first and last quote positions = ({},{}), name='{}'".format(first, end, fio))
+
+    # cut off the surname and name from line
+    line = line[end + 2:]
+    print("line without name={}\n".format(line))
 
 f.close() 
