@@ -16,10 +16,11 @@ import os
 # read from from folder ./data
 filename = os.path.join(os.path.dirname(__file__), 'data', 'WP_Person_math.csv')
 
-print(filename)
-print("Start reading file")
+# print(filename)
+# print("Start reading file")
 f = open( filename, 'r')
-
+date = dict()
+rating = dict()
 
 # content = f.readlines()
 
@@ -30,14 +31,20 @@ for line in f:
     print("source = "+line)
     
     fio= getSurnameAndName(line)
-    print("fio: {}\n".format(fio))
+    # print("fio: {}\n".format(fio))
     
     # cut off the surname and name from line
     end = line.rindex('"',0, len(line))
     line = line[end + 2:]
-    print("line without name = {}\n".format(line))
+    # print("line without name = {}\n".format(line))
     line = line.split(',')
-    print("after split line = {}".format(line))
-    
+    # print("after split line = {}".format(line))
+    d = line[1]
+    year =line[5]
+    # i = int(year) - 2001
+    rating[fio] = d
+    date[fio] = year
+    print('rating:' + fio + ': ' + rating[fio])
+    print( fio + ': ' +"{}\n".format(date[fio]))  
 
 f.close() 
