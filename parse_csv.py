@@ -36,12 +36,14 @@ for line in f:
     # cut off the surname and name from line
     end = line.rindex('"',0, len(line))
     line = line[end + 2:]
-    # print("line without name = {}\n".format(line))
     line = line.split(',')
     # print("after split line = {}".format(line))
     d = line[1]
-    year =line[5]
+    #  d = int(line[1])
+    year = line[5]
+    # year = int(line[5])
     # i = int(year) - 2001
+    
     rating[fio] = d
     date[fio] = year
     print('rating:' + fio + ': ' + rating[fio])
