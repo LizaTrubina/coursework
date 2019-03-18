@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # пример комментария по-русски
 
-#
 # Read Wikidata list of persons, extracts expert's rating and other parameters
 
 def getSurnameAndName(string):
@@ -16,41 +15,36 @@ import os
 # read from from folder ./data
 filename = os.path.join(os.path.dirname(__file__), 'data', 'WP_Person_math.csv')
 
-# print(filename)
-# print("Start reading file")
 f = open( filename, 'r')
 date = dict()
 rating = dict()
+my_rating = dict()
 
-# content = f.readlines()
-
-for line in f: 
+for line in f:
+    line.encode('cp1251').decode('utf-8')
     # extract name of person, print Name="..", 
     # split by comma, extract (1) expert rating, (2) year of article creation, 
     # e.g. rating=N, article_year=2013
-    # print("source = "+line)
     
     fio= getSurnameAndName(line)
-    # print("fio: {}\n".format(fio))
     
     # cut off the surname and name from line
     end = line.rindex('"',0, len(line))
     line = line[end + 2:]
     line = line.split(',')
-    # print("after split line = {}".format(line))
     rat = line[1]
-    #  rat = int(line[1])
     year = line[5]
-    # print( 'year : ' +"{}\n".format(year))  
 
     if year and rat:            # parse only the year is available
         date[fio] = year
+        i = int(year)-2001
         rating[fio] = rat
-        print('rating:' + fio + ': ' + rating[fio])
-        print( fio + ': ' +"{}\n".format(date[fio]))  
-
-    # year = int(line[5])
-    # i = int(year) - 2001
-    
+        j = int(rat)
+        sum= round((0.46 * j)+ (0.3* i),0)
+        my_rating[fio] = sum
+        print( fio + ': ' +"{}\n".format(my_rating[fio])) 
+       # print('rating:' + fio + ': ' + rating[fio])
+       # print( fio + ': ' +"{}\n".format(date[fio]))  
+ 
 
 f.close() 
