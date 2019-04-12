@@ -34,16 +34,17 @@ for line in f:
     # cut off the surname and name from line
     end = line.rindex('"',0, len(line))
     line = line[end + 2:]
+    print("line = '{0}'".format(line))
     line = line.split(',')
+    print("len(line) = {0}".format(len(line)))
     rat = line[1]
     year = line[5]
 
     if year and rat:            # parse only the year is available
        # date[fio] = year
-        i = 2019-int(year)
+        age = 2019-int(year)
        # rating[fio] = rat
-        j = int(rat)
-        sum= round((0.38 * i)+ (0.3* j),1)
+        sum= round((0.38 * age)+ (0.3* int(rat)),1) # todo move round to print format
         my_rating[fio] = sum
         print( fio + ': ' +"{}\n".format(my_rating[fio])) 
        # print('rating:' + fio + ': ' + rating[fio])
