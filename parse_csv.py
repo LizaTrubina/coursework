@@ -40,7 +40,7 @@ for line in f:
 
     if year and rat:            # parse only the year is available
        # date[fio] = year
-        i = int(year)-2001
+        i = 2019-int(year)
        # rating[fio] = rat
         j = int(rat)
         sum= round((0.38 * i)+ (0.3* j),1)
