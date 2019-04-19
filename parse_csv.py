@@ -41,7 +41,7 @@ for line in f:
         year = line[5]
         # if year and rating:            # parse only the year is available
         age = 2019-int(year)
-        sum= round((0.38 * age)+ (0.3* int(rating)),0) # todo move round to print format
+        sum= round((0.34 * age)+ (0.5* int(rating)),0) # todo move round to print format
         my_rating[fio] = sum
 
         # print( fio + ': ' +"{}\n".format(my_rating[fio])) 
