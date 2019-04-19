@@ -12,6 +12,7 @@ def getSurnameAndName(string):
     
 import os
 import codecs
+import operator
 
 # read from from folder ./data
 filename = os.path.join(os.path.dirname(__file__), 'data', '19DecWP_Person_math_matem.csv')
@@ -43,9 +44,15 @@ for line in f:
         sum= round((0.38 * age)+ (0.3* int(rating)),0) # todo move round to print format
         my_rating[fio] = sum
 
-        print( fio + ': ' +"{}\n".format(my_rating[fio])) 
+        # print( fio + ': ' +"{}\n".format(my_rating[fio])) 
                     # print('rating:' + fio + ': ' + rating[fio])
                    # print( fio + ': ' +"{}\n".format(date[fio]))
     else: continue
-    
+
+
+list_d = list(my_rating.items())
+list_d.sort(key=lambda i: i[1])
+for i in list_d:
+    print(i[0], ':', i[1])
+
 f.close() 
