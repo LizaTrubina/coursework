@@ -43,7 +43,6 @@ for line in f:
         age = 2019-int(year)
         sum= round((0.34 * age)+ (0.5* int(rating)),0) # todo move round to print format
         my_rating[fio] = sum
-
         # print( fio + ': ' +"{}\n".format(my_rating[fio])) 
                     # print('rating:' + fio + ': ' + rating[fio])
                    # print( fio + ': ' +"{}\n".format(date[fio]))
