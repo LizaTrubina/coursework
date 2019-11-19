@@ -4,11 +4,6 @@
 
 # Read Wikidata list of persons, extracts expert's rating and other parameters
 
-def getSurnameAndName(string):
-    first = string.index('"',0, len(string))
-    end = string.rindex('"',0, len(string))
-    name = string[first+1:end]
-    return name
     
 import os
 import codecs
