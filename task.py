@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# пример комментария по-русски
 
-# Read Wikidata list of persons, extracts expert's rating and other parameters
-
-    
 import os
 import codecs
 import operator
