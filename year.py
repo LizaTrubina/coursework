@@ -67,6 +67,14 @@ while a < (max_year + 1):
     a += 1
     count_year[a] = count
     
+f1 = open('y.txt', 'w')
+f2 = open('x.txt', 'w')
+for i in count_year:
+    f1.write(str(count_year[i])+ '\n')
+    f2.write(str(i-1)+ '\n')
+   
+f1.close()
+f2.close()
 
 for i in count_year:
     print (i-1,":", count_year[i])
