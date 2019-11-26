@@ -14,13 +14,13 @@ if __name__ == '__main__':
    with open("1y.txt") as f:
       for line in f:
          data_y.append(line)
- 
-
+         
+   # plt.axis([2000, 2020, 0, 10])
    plt.xlabel("X")
    plt.ylabel("Y")
    # представляем точки (х,у) кружочками диаметра 10
-   plt.plot(data_x, data_y, 'r')
- 
+ #  plt.plot(data_x, data_y, 'r')
+   plt.plot(data_x, data_y, 'ro-') 
    # Сетка на фоне для улучшения восприятия
    # plt.grid(True, linestyle='-', color='0.75')
  
