@@ -9,7 +9,10 @@ import operator
 filename = os.path.join(os.path.dirname(__file__), 'data', 'dates.csv')
 
 f = codecs.open( filename, "r", "utf-8" )
+
+# lifespan - average length of life, for each year (16?? - 1953)
 lifespan = dict()
+# count_math[i] = V means that V mathematicians lived in the year i
 count_math = dict()
 d = []
 b = []
