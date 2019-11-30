@@ -37,6 +37,7 @@ for line in f:
              #   count = count + 1
         else: continue
         
+        
     else:
         line = line.split(',')
         if len(line) == 3 and line[1] !='' and line[2] != '\n' :

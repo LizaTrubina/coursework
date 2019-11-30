@@ -10,7 +10,7 @@ filename = os.path.join(os.path.dirname(__file__), 'data', 'dates.csv')
 
 f = codecs.open( filename, "r", "utf-8" )
 
-# lifespan - average length of life, for each year (16?? - 1953)
+# lifespan - average length of life, for each year (1669 - 1968)
 lifespan = dict()
 # count_math[i] = V means that V mathematicians lived in the year i
 count_math = dict()
@@ -54,8 +54,6 @@ for line in f:
             count += 1
             i += 1
 
-# print(b[5], d[5])
-# print( count, ':', i, ':', min_year, ':', max_year)
 a = min_year
 cur = 0
 sum = 0
@@ -66,7 +64,6 @@ while a < (max_year + 1):
     m = 0
     sum = 0
     for cur in b:
-      #  print("i:" ,index)
         if cur == a:
             m += 1
             age = d[index] - cur
@@ -79,7 +76,17 @@ while a < (max_year + 1):
     else:
             result = round( (sum / m), 0)
             lifespan[a] = result
-           # print(result)
+            
+f1 = open('y_lifespan.txt', 'w')
+f2 = open('x_lifespan.txt', 'w')
+f3 = open('count_lifespan.txt', 'w')
+for i in lifespan:
+    f1.write(str(lifespan[i])+ '\n')
+    f2.write(str(i-1)+ '\n')
+    f3.write(str(count_math[i])+ '\n')
+f1.close()
+f2.close()
+f3.close()
 
 for i in lifespan:
     print (i-1,":", lifespan[i], "", count_math[i])
