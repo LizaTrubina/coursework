@@ -32,6 +32,6 @@ if __name__ == '__main__':
    #  Определяем внешний вид линий вспомогательной сетки:
    plt.grid(which='minor', color = 'k',  linestyle = ':')
    
-   plt.savefig('chart.png', fmt='png')
+   plt.savefig('chart1.png', fmt='png')
    plt.show()
    
