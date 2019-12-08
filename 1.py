@@ -30,12 +30,12 @@ if __name__ == '__main__':
   # rnd = np.random.randint(0, 10, size=(3, rng.size))
   # yrs = 1600 + rng
   # fig, ax = plt.subplots(figsize=(5, 3))
-   plt.axis([1669 , 2020, 0, 1100])
+   plt.axis([1700 , 2020, 0, 1100])
    plt.xlabel("Год")
    plt.ylabel("Число математиков")
    
    # представляем точки (х,у) кружочками диаметра 10
-   plt.plot(data_x_usa, data_y_usa, 'r', color='green')
+   plt.plot(data_x_usa, data_y_usa, 'r--', color='green')
    plt.plot(data_x, data_y, 'r')
 
    # Сетка на фоне для улучшения восприятия
