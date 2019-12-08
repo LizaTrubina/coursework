@@ -20,7 +20,6 @@ if __name__ == '__main__':
    plt.ylabel("Средняя продолжительность жизни")
    
    # представляем точки (х,у) кружочками диаметра 10
-  
    plt.plot(data_x, data_y, 'o')
 
    # Сетка на фоне для улучшения восприятия
@@ -32,6 +31,6 @@ if __name__ == '__main__':
    #  Определяем внешний вид линий вспомогательной сетки:
    plt.grid(which='minor', color = 'k',  linestyle = ':')
    
-   plt.savefig('chart1.png', fmt='png')
+   plt.savefig('chart2.png', fmt='png')
    plt.show()
    

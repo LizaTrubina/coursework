@@ -58,7 +58,7 @@ a = min_year
 cur = 0
 sum = 0
 m = 0
-
+zero = 0
 while a < (max_year + 1):
     index = 0
     m = 0
@@ -72,7 +72,8 @@ while a < (max_year + 1):
     a += 1
     count_math[a] = m
     if m == 0:
-        lifespan[a] = 0
+       # lifespan[a] = 0
+       zero +=1
     else:
             result = round( (sum / m), 0)
             lifespan[a] = result
@@ -90,6 +91,6 @@ f3.close()
 
 for i in lifespan:
     print (i-1,":", lifespan[i], "", count_math[i])
-    
+print("0=" , zero)    
                            
 f.close() 
