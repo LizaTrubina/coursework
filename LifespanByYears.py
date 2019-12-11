@@ -6,7 +6,7 @@ import codecs
 import operator
 
 # read from from folder ./data
-filename = os.path.join(os.path.dirname(__file__), 'data', 'dates.csv')
+filename = os.path.join(os.path.dirname(__file__), 'data', 'dates_usa.csv')
 
 f = codecs.open( filename, "r", "utf-8" )
 
@@ -78,9 +78,12 @@ while a < (max_year + 1):
             result = round( (sum / m), 0)
             lifespan[a] = result
             
-f1 = open('y_lifespan.txt', 'w')
-f2 = open('x_lifespan.txt', 'w')
-f3 = open('count_lifespan.txt', 'w')
+# f1 = open('y_lifespan.txt', 'w')
+# f2 = open('x_lifespan.txt', 'w')
+# f3 = open('count_lifespan.txt', 'w')
+f1 = open('y_lifespan_usa.txt', 'w')
+f2 = open('x_lifespan_usa.txt', 'w')
+f3 = open('count_lifespan_usa.txt', 'w')
 for i in lifespan:
     f1.write(str(lifespan[i])+ '\n')
     f2.write(str(i-1)+ '\n')
