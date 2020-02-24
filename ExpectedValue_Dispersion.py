@@ -48,14 +48,15 @@ if __name__ == '__main__':
 
 
    plt.plot(m_data_x, mean_data_y, 'o', color = 'green')
-   plt.plot(m_data_x, max_data_y, '--', color = 'red')
-   plt.plot(m_data_x, min_data_y, '--', color = 'blue')
+   plt.plot(m_data_x, max_data_y, 'o', color = 'red')
+   plt.plot(m_data_x, min_data_y, 'o', color = 'blue')
    
    plt.minorticks_on()
    # Определяем внешний вид линий основной сетки:
    plt.grid(which='major', color = 'k',  linewidth = 1)
    #  Определяем внешний вид линий вспомогательной сетки:
    plt.grid(which='minor', color = 'k',  linestyle = ':')
+
    
    plt.savefig('ValueDispersion.png', fmt='png')
    plt.show()
