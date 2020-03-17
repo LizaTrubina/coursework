@@ -16,9 +16,10 @@ if __name__ == '__main__':
          data_y.append(float(line))
     
    plt.axis([1700 , 2000, 0, 100])
-   plt.xlabel("Год")
-   plt.ylabel("Средняя продолжительность жизни")
-   
+   # plt.xlabel("Год")
+   #plt.ylabel("Средняя продолжительность жизни")
+   plt.xlabel("Year")
+   plt.ylabel("Average life span of American mathematicians")
    # представляем точки (х,у) кружочками диаметра 10
    plt.plot(data_x, data_y, 'o', color = "green")
 
@@ -27,7 +28,7 @@ if __name__ == '__main__':
    plt.grid(which='major', color = 'k',  linewidth = 1)
    #  Определяем внешний вид линий вспомогательной сетки:
    plt.grid(which='minor', color = 'k',  linestyle = ':')
-   
-   plt.savefig('lifespan_usa.png', fmt='png')
+   # plt.savefig('lifespan_usa.png', fmt='png')
+   plt.savefig('lifespan_usa_eng.png', fmt='png')
    plt.show()
    

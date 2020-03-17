@@ -31,9 +31,10 @@ if __name__ == '__main__':
   # yrs = 1600 + rng
   # fig, ax = plt.subplots(figsize=(5, 3))
    plt.axis([1700 , 2020, 0, 1100])
-   plt.xlabel("Год")
-   plt.ylabel("Число математиков")
-   
+  # plt.xlabel("Год")
+  # plt.ylabel("Число математиков")
+   plt.xlabel("Year")
+   plt.ylabel("Quantity of mathematicians")
    # представляем точки (х,у) кружочками диаметра 10
    plt.plot(data_x_usa, data_y_usa, 'r--', color='green')
    plt.plot(data_x, data_y, 'r')
@@ -47,6 +48,6 @@ if __name__ == '__main__':
    #  Определяем внешний вид линий вспомогательной сетки:
    plt.grid(which='minor', color = 'k',  linestyle = ':')
    
-   plt.savefig('count_math.png', fmt='png')
+   plt.savefig('count_math_eng.png', fmt='png')
    plt.show()
    
