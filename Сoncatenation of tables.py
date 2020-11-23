@@ -34,6 +34,7 @@ for line in f1:
         line = line.split(',')
         arr[i][0] = int(line[1])
         i += 1
+f1.close()
 i = 0
 for line in f2:
     if line[0] == '"':
@@ -45,9 +46,8 @@ for line in f2:
         line = line.split(',')
         arr[i][1] = int(line[1])
         i += 1
-
-f1.close()
 f2.close()
+
 f1 = codecs.open( filename1, "r", "utf-8" )
 i = 0
 for line in f1:
@@ -57,8 +57,8 @@ for line in f1:
             arg = arg.split(',')
             if line[0] == arg[0] and line[1] == arg[1]:
                 arr[i][2] = int(arg[2])
-
-        if line[0] != '"' and arg[0] != '"':
+        else:
+        #if line[0] != '"' and arg[0] != '"':
             line = line.split(',')
             arg = arg.split(',')
             if line[0] == arg[0]:
