@@ -25,7 +25,7 @@ f6 = codecs.open( filename6, "r", "utf-8" )
 num = dict()
 table = dict()
 m = 7 # number of parameters
-n = 2065 # number of mathematicians
+n = 2085 # number of mathematicians
 arr = np.empty((n, m))
 
 for k in range(n):
